@@ -11,11 +11,11 @@
 <body>
 <p id="ffLoad">Furniture Fit betöltése…</p>
 <script>
-/* A bemutató egyetlen HTML-fájl (3D modellekkel együtt ~7,7 MB); itt 4 részben töltődik be, majd a böngésző egyben futtatja. */
+/* A bemutató egyetlen HTML-fájl (3D modellekkel együtt ~7,2 MB); itt 4 részben töltődik be, majd a böngésző egyben futtatja. */
 (async () => {
   try {
     const N = 4;
-    const parts = await Promise.all(Array.from({ length: N }, (_, i) => fetch('app/0eff699158/part' + (i + 1) + '.txt').then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })));
+    const parts = await Promise.all(Array.from({ length: N }, (_, i) => fetch('app/07a06e8d52/part' + (i + 1) + '.txt').then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })));
     const html = parts.join('');
     document.open(); document.write(html); document.close();
   } catch (e) {

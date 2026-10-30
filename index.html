@@ -15,7 +15,7 @@
 (async () => {
   try {
     const N = 4;
-    const parts = await Promise.all(Array.from({ length: N }, (_, i) => fetch('app/4893dfb23e/part' + (i + 1) + '.txt').then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })));
+    const parts = await Promise.all(Array.from({ length: N }, (_, i) => fetch('app/f54ef63019/part' + (i + 1) + '.txt').then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })));
     const html = parts.join('');
     document.open(); document.write(html); document.close();
   } catch (e) {
